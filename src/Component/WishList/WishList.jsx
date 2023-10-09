@@ -48,10 +48,10 @@ export default function WishList() {
 
                   </div>
                 </div>
-                <div className="col-3">
+                <div className="col-md-3 gy-3 p-3">
                   <button className='btn bg-main' onClick={() => addToCart(prod.id)}>Add To Cart</button>
                 </div>
-                <div class=" col-3 ">
+                <div class=" col-md-3 gy-3 p-3">
                   <button  class="btn btn-danger " onClick={()=> removewishList(prod.id)}>
                     <i class="fa fa-trash"></i> Remove
                   </button>

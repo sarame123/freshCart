@@ -51,6 +51,8 @@ export default function NavBar() {
         </ul>
         
       </div>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
       <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
       <li className="nav-item d-flex justify-content-center align-items-center p-2 ">
            <i className='fa-brands fa-facebook pe-2'></i>
@@ -59,12 +61,12 @@ export default function NavBar() {
            <i className='fa-brands fa-linkedin pe-2'></i>
           </li>
           
-          {userToken!==null &&userToken!==null?<>
+          {userToken!==null ?<>
             <li className="nav-item">
           <Link className="nav-link " aria-current="" to='/wishList' ><i className='fa fa-heart active'></i></Link>
         </li>
             <li className="nav-item">
-          <Link className="nav-link " aria-current="" to='/profile' >hello{userData?.name}</Link>
+          <Link className="nav-link " aria-current="" to='/profile' >hello</Link>
         </li>
             <li className="nav-item">
             <span className="nav-link cursor-pointer" onClick={()=>logOut()} >Logout</span>
@@ -80,6 +82,7 @@ export default function NavBar() {
             <Link className="nav-link" to="/login">Login</Link>
           </li></>}
         </ul>
+        </div>
     </div>
   </nav></>
   )

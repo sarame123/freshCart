@@ -22,7 +22,7 @@ export default function Register() {
   let validationSchema = Yup.object({
      name:Yup.string().min(2,'min length is 2 char').max(7,'max is 7 char').required('name is required'),
      email:Yup.string().email('email not valid').required('email is required'),
-     password:Yup.string().matches(/^[A-Z][a-z0-9]{5,10}$/,'password not match').required('pass is required'),
+     password:Yup.string().matches(/^[A-Z][a-z0-9]{5,10}$/,'password not match you must start with capital letter ').required('pass is required'),
      rePassword:Yup.string().oneOf([Yup.ref('password')]).required('repassword is required'),
      phone:Yup.string().matches(/^(002)?01[0-25][0-9]{8}$/,'not match').required('phone is required')
   })

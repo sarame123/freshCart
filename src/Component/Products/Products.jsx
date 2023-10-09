@@ -46,7 +46,7 @@ export default function Products() {
       <div className="container">
    
         {isLoading == false ? <div className="row ">
-          {data?.data.data.map((product,index) => <div className="col-lg-2 col-md-4 mb-4 text-center py-3  " key={index}>
+          {data?.data?.data.map((product,index) => <div className="col-lg-2 col-md-4 mb-4 text-center py-3  " key={index}>
         
               <div className="product card h-100 px-2 py-2 ">
              <button  onClick={()=>aadprtowishList(product._id,index)}  className=' border-0 p-2 float-end'

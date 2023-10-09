@@ -22,10 +22,14 @@ export default function CategoreySlider() {
       <h3>Shop Popular Slider</h3>
       <Slider {...settings}>
       {data?.data.data?data?.data.data.map((category)=>
-      <div key={category._id}>
-        <img src={category.image} className='w-100'  height={150} alt={category.name} />
-        <p className='text-center text-main'>{category.name}</p>
-      </div>
+      <div key={category._id} >
+   <div>
+   <img src={category.image} className='w-100'  height={150} alt={category.name} />
+   </div>
+      <p className='text-main text-center col-sm-1 col-md-12'>{category.name}</p>
+   </div>
+  
+
  ):""}   </Slider></div>
   )
 }
